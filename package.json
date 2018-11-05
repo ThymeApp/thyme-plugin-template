@@ -1,0 +1,17 @@
+{
+  "name": "thyme-plugin-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base node_modules/thyme/build",
+    "build:thyme": "REACT_APP_EXTRA_SCRIPTS=/main.js npm run build:staging --prefix node_modules/thyme",
+    "postinstall": "npm run build:thyme"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "thyme": "git+ssh://git@github.com/Gaya/thyme.git",
+    "webpack-cli": "^3.1.2"
+  }
+}
